@@ -161,7 +161,7 @@ actor_agent = create_agent(
     system_prompt=ACTOR_PROMPT,
 )
 
-user_input = 'Find top 20 docker images by downloads'
+user_input = 'Start simple fastapi server on port 4555. Call tool for start is start_web and execute it'
 result = actor_agent.invoke({
             "messages": [{"role": "user", "content": user_input}]
         })
