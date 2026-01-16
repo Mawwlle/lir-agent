@@ -7,6 +7,10 @@
 
 This project provides an intelligent agent capable of dynamically expanding its own abilities by creating and using new tools as needed. It helps users solve problems by reasoning, acting, and adapting its functionalities in real-time, offering a flexible and self-improving problem-solving assistant.
 
+## Demo
+https://github.com/user-attachments/assets/79a93a52-9944-463d-b7e8-41e13ed04579
+
+
 ## Table of Contents
 
 - [Core features](#core-features)
