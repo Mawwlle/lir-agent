@@ -1,0 +1,23 @@
+name: OSA Docstrings
+on:
+  pull_request:
+    paths: ['**.py']
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+          
+      - name: Run OSA with OpenRouter
+        uses: aimclub/OSA@feature/ci_cd_mode
+        with:
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
+          api: 'openai'
+          base_url: 'https://openrouter.ai/api/v1'
+          model: 'openai/gpt-4o'
